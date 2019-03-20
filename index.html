@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Aditii</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		
+		<link href="css/style.css" rel="stylesheet">
+		<script src="https://unpkg.com/vue"></script>
+	</head>
+	<body>
+		<div id="vue-app">
+			<header>
+				<div class="hdr-top">
+					<div class="container">
+						<div class="row">
+							<div class="l-logo logo">Aditii</div>
+							<div id="price" class="l-cart cart">
+								<img src="./img/basket.png" alt="BASKET">
+								<div class="price">${{ total }}</div>
+
+							</div>
+							<div class="l-search search">
+								<div class="dropdown">
+									<div class="dropdown-title">Menu
+										<div class="caret"></div>
+									</div>
+									<ul role="dropdown" class="menu">
+										<li v-for="option in options"><a href="">{{ option }}</a></li>
+									</ul>
+								</div>
+								<input type="text" name="search" class="search-input">
+							</div>
+						</div>
+					</div>
+				</div>
+				<nav>
+					<div class="container">
+						<ul role="horizontal" class="row menu">
+							<li v-for="option in options"><a href="">{{ option }}</a></li>
+						</ul>
+					</div>
+				</nav>
+				<div class="hdr-banner">
+					<div class="container">
+						<div data-flickity-options="{&quot;prevNextButtons&quot;:false,&quot;wrapAround&quot;:true}" class="gallery js-flickity">
+							<div class="gallery-cell row">
+								<div class="l-left">
+									<img src="img/bnr-shirt-w.png" alt="Shirt">
+								</div>
+								<div class="l-right">
+									<p class="bnr-title">Cowhide</p>
+									<p class="bnr-title">Standard Crew</p>
+									<p class="bnr-desc">White coloured, short-sleeved, printed T-shirt for men by Levi's. This crew-neck T-shirt is made of organic cotton and comes in a regular fit.</p>
+									<a href="" class="btn bnr-btn">Shop now</a>
+								</div>
+							</div>
+							<div class="gallery-cell row">
+								<div class="l-left">
+									<img src="img/bnr-shirt-y.png" alt="Shirt">
+								</div>
+								<div class="l-right">
+									<p class="bnr-title">Cowhide</p>
+									<p class="bnr-title">Standard Crew</p>
+									<p class="bnr-desc">Yellow coloured, short-sleeved, printed T-shirt for men by Levi's. This crew-neck T-shirt is made of organic cotton and comes in a regular fit.</p>
+									<a href="" class="btn bnr-btn">Shop now</a>
+								</div>
+							</div>
+							<div class="gallery-cell row">
+								<div class="l-left">
+									<img src="img/bnr-shirt-b.png" alt="Shirt">
+								</div>
+								<div class="l-right">
+									<p class="bnr-title">Cowhide</p>
+									<p class="bnr-title">Standard Crew</p>
+									<p class="bnr-desc">Blue coloured, short-sleeved, printed T-shirt for men by Levi's. This crew-neck T-shirt is made of organic cotton and comes in a regular fit.</p>
+									<a href="" class="btn bnr-btn">Shop now</a>
+								</div>
+							</div>
+							<div class="gallery-cell row">
+								<div class="l-left">
+									<img src="img/bnr-shirt-g.png" alt="Shirt">
+								</div>
+								<div class="l-right">
+									<p class="bnr-title">Cowhide</p>
+									<p class="bnr-title">Standard Crew</p>
+									<p class="bnr-desc">Green coloured, short-sleeved, printed T-shirt for men by Levi's. This crew-neck T-shirt is made of organic cotton and comes in a regular fit.</p>
+									<a href="" class="btn bnr-btn">Shop now</a>
+								</div>
+							</div>
+							<div class="gallery-cell row">
+								<div class="l-left">
+									<img src="img/bnr-shirt-p.png" alt="Shirt">
+								</div>
+								<div class="l-right">
+									<p class="bnr-title">Cowhide</p>
+									<p class="bnr-title">Standard Crew</p>
+									<p class="bnr-desc">Purple coloured, short-sleeved, printed T-shirt for men by Levi's. This crew-neck T-shirt is made of organic cotton and comes in a regular fit.</p>
+									<a href="" class="btn bnr-btn">Shop now</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hdr-slider">
+					<div class="container">
+						<ul data-flickity-options="{&quot;cellAlign&quot;:&quot;left&quot;,&quot;pageDots&quot;:false,&quot;wrapAround&quot;:true}" class="sldr-list js-flickity">
+							<li class="sldr-list-item row">
+								<img src="img/sldr-pic-1.png" alt="branded shoes">
+								<div class="slsr-list-right">
+									<p>branded</p>
+									<p>shoes</p>
+									<a href="" class="btn sldr-btn">shop</a>
+								</div>
+							</li>
+							<li class="sldr-list-item row">
+								<img src="img/sldr-pic-2.png" alt="branded tshirts">
+								<div class="slsr-list-right">
+									<p>branded</p>
+									<p>tshirts</p>
+									<a href="" class="btn sldr-btn">shop</a>
+								</div>
+							</li>
+							<li class="sldr-list-item row">
+								<img src="img/sldr-pic-1.png" alt="branded shoes">
+								<div class="slsr-list-right">
+									<p>branded</p>
+									<p>shoes</p>
+									<a href="" class="btn sldr-btn">shop</a>
+								</div>
+							</li>
+							<li class="sldr-list-item row">
+								<img src="img/sldr-pic-1.png" alt="branded shoes">
+								<div class="slsr-list-right">
+									<p>branded</p>
+									<p>shoes</p>
+									<a href="" class="btn sldr-btn">shop</a>
+								</div>
+							</li>
+							<li class="sldr-list-item row">
+								<img src="img/sldr-pic-2.png" alt="branded tshirts">
+								<div class="slsr-list-right">
+									<p>branded</p>
+									<p>tshirts</p>
+									<a href="" class="btn sldr-btn">shop</a>
+								</div>
+							</li>
+							<li class="sldr-list-item row">
+								<img src="img/sldr-pic-1.png" alt="branded shoes">
+								<div class="slsr-list-right">
+									<p>branded</p>
+									<p>shoes</p>
+									<a href="" class="btn sldr-btn">shop</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</header>
+			<main>
+				<div class="main-header">
+					<div class="container">
+						<h2 class="main-header-title">{{title}}</h2>
+					</div>
+				</div>
+				<div class="container">
+					<section class="main-gallery l-centered">
+						<div class="row">
+							<div v-for="product in products" class="main-gallery-item">
+								<img v-bind:src="product.src" alt="branded shoes">
+								<h4 class="item-title">{{product.title}}</h4>
+								<div class="price-info">
+									<div class="item-price">${{product.price}}</div>
+									<a href="javascript:;"class="btn item-btn" @click="buy">buy now</a>
+								</div>
+							</div>
+							
+						</div>
+					</section>
+				</div>
+			</main>
+			<footer>
+				<div class="footer-top">
+					<div class="container">
+						<div class="row l-centered">
+							<div class="footer-top-col">
+								<h4 class="footer-col-title">FEATURED SALE</h4>
+								<ul class="footer-col-list">
+									<li><a href="">Alexis Hudson</a></li>
+									<li><a href="">American Apparel</a></li>
+									<li><a href="">Ben Sherman</a></li>
+									<li><a href="">Big Buddha</a></li>
+									<li><a href="">Chanel</a></li>
+									<li><a href="">Christian Audigier</a></li>
+									<li><a href="">Coach</a></li>
+									<li><a href="">Cole Haan</a></li>
+								</ul>
+							</div>
+							<div class="footer-top-col">
+								<h4 class="footer-col-title">MEN'S STORE</h4>
+								<ul class="footer-col-list">
+									<li><a href="">Alexis Hudson</a></li>
+									<li><a href="">American Apparel</a></li>
+									<li><a href="">Ben Sherman</a></li>
+									<li><a href="">Big Buddha</a></li>
+									<li><a href="">Chanel</a></li>
+									<li><a href="">Christian Audigier</a></li>
+									<li><a href="">Coach</a></li>
+									<li><a href="">Cole Haan</a></li>
+								</ul>
+							</div>
+							<div class="footer-top-col">
+								<h4 class="footer-col-title">WOMEN STORE</h4>
+								<ul class="footer-col-list">
+									<li><a href="">Alexis Hudson</a></li>
+									<li><a href="">American Apparel</a></li>
+									<li><a href="">Ben Sherman</a></li>
+									<li><a href="">Big Buddha</a></li>
+									<li><a href="">Chanel</a></li>
+									<li><a href="">Christian Audigier</a></li>
+									<li><a href="">Coach</a></li>
+									<li><a href="">Cole Haan</a></li>
+								</ul>
+							</div>
+							<div class="footer-top-col">
+								<h4 class="footer-col-title">QUICK LINKS</h4>
+								<ul class="footer-col-list">
+									<li><a href="">Alexis Hudson</a></li>
+									<li><a href="">American Apparel</a></li>
+									<li><a href="">Ben Sherman</a></li>
+									<li><a href="">Big Buddha</a></li>
+									<li><a href="">Chanel</a></li>
+									<li><a href="">Christian Audigier</a></li>
+									<li><a href="">Coach</a></li>
+									<li><a href="">Cole Haan</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<span class="copyright">Copyright © 2013 Css Author</span>
+				</div>
+			</footer>
+		</div>
+		<script src="js/vue.js"></script>
+		<script src="js/flickity.pkgd.min.js"></script>
+	</body>
+</html>
